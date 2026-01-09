@@ -1,0 +1,37 @@
+:root { --bg: #0b0f19; --card: #151c2c; --border: #232d42; --blue: #3b82f6; --green: #10b981; --red: #f43f5e; }
+body { background: var(--bg); color: #e2e8f0; font-family: 'Inter', sans-serif; margin: 0; padding: 20px; }
+.container { max-width: 1200px; margin: auto; }
+header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 15px; margin-bottom: 25px; }
+.blue { color: var(--blue); }
+.grid-main { display: grid; grid-template-columns: 350px 1fr; gap: 20px; }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+.card canvas { max-height: 250px; height: 250px !important; }
+h3 { font-size: 11px; color: #64748b; letter-spacing: 1px; margin-top: 0; }
+.list { display: flex; flex-direction: column; gap: 8px; }
+.row { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #1e293b; }
+.row:last-child { border-bottom: none; }
+.stock-info { display: flex; flex-direction: column; gap: 4px; flex: 1; }
+.stock-header { display: flex; justify-content: space-between; align-items: center; }
+.stock-volume { font-size: 10px; color: #64748b; }
+.stock-price-row { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.stock-price { font-size: 14px; font-weight: bold; color: #e2e8f0; }
+.stock-change { font-size: 11px; font-weight: 600; }
+.stock-range { display: flex; gap: 12px; font-size: 10px; color: #64748b; }
+.order-controls { display: flex; gap: 8px; align-items: center; }
+.qty-input { width: 60px; padding: 6px 8px; background: #0f172a; border: 1px solid var(--border); border-radius: 4px; color: #e2e8f0; font-size: 12px; }
+.qty-input:focus { outline: none; border-color: var(--blue); }
+button { border: none; padding: 8px 16px; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 12px; transition: opacity 0.2s, transform 0.1s; white-space: nowrap; }
+button:hover { opacity: 0.9; transform: scale(1.05); }
+button:active { transform: scale(0.95); }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+.buy-btn { background: var(--green); color: white; }
+.sell-btn { background: var(--red); color: white; }
+table { width: 100%; border-collapse: collapse; }
+td, th { text-align: left; padding: 12px; border-bottom: 1px solid #1e293b; font-size: 13px; }
+th { color: #64748b; font-weight: 600; }
+td .order-controls { display: flex; gap: 6px; align-items: center; }
+.history-container { max-height: 400px; overflow-y: auto; }
+.history-item { display: flex; justify-content: space-between; padding: 8px; font-size: 13px; border-left: 3px solid #334155; margin-bottom: 5px; background: #0f172a; }
+.history-item.buy { border-color: var(--green); }
+.history-item.sell { border-color: var(--red); }
+.pnl-box { padding: 10px 20px; background: var(--card); border-radius: 8px; font-weight: bold; font-size: 16px; }
