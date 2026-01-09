@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bajaj Trading Terminal Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>TRADING <span class="blue">PRO</span></h1>
+            <div id="pnl-display" class="pnl-box">Profit/Loss: $0.00</div>
+        </header>
+
+        <div class="grid-main">
+            <aside>
+                <section class="card">
+                    <h3>MARKET WATCH</h3>
+                    <div id="watchlist" class="list"></div>
+                </section>
+                <section class="card">
+                    <h3>MARKET INDEX</h3>
+                    <canvas id="priceChart"></canvas>
+                </section>
+            </aside>
+
+            <main>
+                <section class="card">
+                    <h3>ACTIVE HOLDINGS</h3>
+                    <table>
+                        <thead><tr><th>STOCK</th><th>QTY</th><th>AVG</th><th>CURRENT</th><th>P&L</th><th>ACTION</th></tr></thead>
+                        <tbody id="portfolio-body"></tbody>
+                    </table>
+                </section>
+
+                <section class="card">
+                    <h3>TRADE HISTORY</h3>
+                    <div id="history-list" class="history-container"></div>
+                </section>
+            </main>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
